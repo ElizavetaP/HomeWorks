@@ -1,3 +1,0 @@
-# HomeWorks
-
-My homework repo
