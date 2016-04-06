@@ -7,7 +7,7 @@ public class StatementsExamples {
 	public static void main(String[] args) {
 
 		if (args.length == 0) {
-			System.out.println("Usage: EvenOddExample <number>");
+			System.out.println("Usage: IntervalExample <number>");
 			System.exit(0);
 		}
 
