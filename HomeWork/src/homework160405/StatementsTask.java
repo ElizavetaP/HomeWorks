@@ -5,6 +5,7 @@ public class StatementsTask {
 	public static void main(String[] args) {
 
 		if (args.length == 0) {
+
 			System.out.println("Usage: StatementsTask <number>");
 			System.exit(0);
 		}
@@ -14,17 +15,17 @@ public class StatementsTask {
 		if (num == 5) {
 
 			System.out.println("Мало");
-		}
 
-		if (num == 2) {
+		} else if (num == 2) {
+
 			System.out.println("Много");
-		}
 
-		if (num == 1) {
+		} else if (num == 1) {
+
 			System.out.println("В самый раз");
-		}
 
-		if (num != 1 & num != 2 & num != 5) {
+		} else {
+
 			System.out.println("Неверное значение");
 		}
 
