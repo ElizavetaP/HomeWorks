@@ -5,7 +5,7 @@ public class StatementsTask {
 	public static void main(String[] args) {
 
 		if (args.length == 0) {
-			System.out.println("Usage: TwoFiveOneExample <number>");
+			System.out.println("Usage: StatementsTask <number>");
 			System.exit(0);
 		}
 
