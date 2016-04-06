@@ -9,22 +9,22 @@ public class StatementsTask {
 			System.exit(0);
 		}
 
-		int x = Integer.parseInt(args[0]);
+		int num = Integer.parseInt(args[0]);
 
-		if (x == 2) {
+		if (num == 5) {
 
 			System.out.println("Мало");
 		}
 
-		if (x == 5) {
+		if (num == 2) {
 			System.out.println("Много");
 		}
 
-		if (x == 1) {
+		if (num == 1) {
 			System.out.println("В самый раз");
 		}
 
-		if (x != 1 & x != 2 & x != 5) {
+		if (num != 1 & num != 2 & num != 5) {
 			System.out.println("Неверное значение");
 		}
 
