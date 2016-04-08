@@ -14,7 +14,7 @@ public class PrintBit {
 		}
 
 		int x = Integer.parseInt(args[0]);
-		
+
 		System.out.println(Integer.toBinaryString(x));
 
 		while (x > 0) {
