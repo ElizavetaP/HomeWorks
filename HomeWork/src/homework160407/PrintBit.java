@@ -19,7 +19,7 @@ public class PrintBit {
 
 		while (x > 0) {
 
-			System.out.println((x % 2 == 0) ? (0) : (1));
+			System.out.println(x % 2 == 0 ? 0 : 1);
 
 			x = x >> 1;
 
