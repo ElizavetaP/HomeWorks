@@ -13,13 +13,12 @@ public class Exercise {
 		System.out.println(x + "," + y + "," + z);
 		
 		
-		int y1 = 1;
-		int z1 = 1;
-		int x1;
+		y = 1;
+		z = 1;
 
-		x1 = (y1 >= 10) ? (z1++) : (y1++);
+		x = (y >= 10) ? (z++) : (y++);
 		
-		System.out.println(x1 + "," + y1 + "," + z1);
+		System.out.println(x + "," + y + "," + z);
 		
 	}
 
