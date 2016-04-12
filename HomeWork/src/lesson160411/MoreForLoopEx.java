@@ -1,4 +1,4 @@
-package classwork160411;
+package lesson160411;
 
 public class MoreForLoopEx {
 
