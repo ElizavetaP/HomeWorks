@@ -28,7 +28,7 @@ public class BinarySearch {
 			}
 			if (key > a[mid]) {
 				left = mid + 1;
-			} else if (key < a[mid]) {
+			} else {
 				right = mid - 1;
 			}
 
