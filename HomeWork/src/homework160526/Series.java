@@ -5,7 +5,7 @@ public class Series {
 		number(0.000005);
 	}
 
-	static double number(double epsilon) {
+	static int number(double epsilon) {
 		double a = 1;
 		int n = 1;
 		for (; a >= epsilon; n++) {
