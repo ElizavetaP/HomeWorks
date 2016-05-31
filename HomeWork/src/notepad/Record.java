@@ -8,5 +8,9 @@ public class Record {
 		return text;
 	}
 	
+	public void setText(String text){
+		this.text = text;
+	}
+	
 
 }
