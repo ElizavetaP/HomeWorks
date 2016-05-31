@@ -17,7 +17,7 @@ public class Notepad {
 	 * @param record
 	 */
 	void add(Record record){
-		records.add(record.getText());
+		records.add(record);
 	}
 	/**
 	 * removing a record.
@@ -27,12 +27,12 @@ public class Notepad {
 		records.remove(number);
 	}
 	/**
-	 * 
+	 * editing a record.
 	 * @param number
 	 * @param text
 	 */
-	void edit(int number, String text){
-		records.set(number, text);
+	void edit(int number, Record record){
+		records.set(number, record);
 	}
 	/**
 	 * view all records.
