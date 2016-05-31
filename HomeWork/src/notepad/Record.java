@@ -1,6 +1,6 @@
 package notepad;
 
-public class Record0 {
+public class Record {
 
 	private String text;
 	

@@ -1,6 +1,6 @@
 package notepad;
 
-import homework160526.Record0;
+import homework160526.Record;
 
 /**
  * This class collects records into an array, 
@@ -8,15 +8,15 @@ import homework160526.Record0;
  */
 import java.util.ArrayList;
 
-public class Notepad0 {
+public class Notepad {
 
-	private ArrayList<Record0> records;
+	private ArrayList<Record> records;
 	
 	/**
 	 * adding records in notepad.
 	 * @param record
 	 */
-	void add(Record0 record){
+	void add(Record record){
 		records.add(record.getText());
 	}
 	/**
