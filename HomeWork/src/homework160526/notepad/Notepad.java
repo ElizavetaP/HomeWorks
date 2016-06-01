@@ -1,6 +1,4 @@
-package notepad;
-
-import homework160526.Record;
+package homework160526.notepad;
 
 /**
  * This class collects records into an array, 
@@ -8,9 +6,11 @@ import homework160526.Record;
  */
 import java.util.ArrayList;
 
+import homework160526.notepad.Record;
+
 public class Notepad {
 
-	private ArrayList<Record> records;
+	private ArrayList<Record> records = new ArrayList<Record>();
 	
 	/**
 	 * adding records in notepad.
@@ -37,10 +37,13 @@ public class Notepad {
 	/**
 	 * view all records.
 	 */
-	void view(){
+	public String toString(){
+		String result = "";
 		for (int i = 0; i < records.size(); i++) {
-			System.out.println(records.get(i));
+			result+=records.get(i).getText() +"\n";
 		}
+		return result;
+		
 	}
 	
 

@@ -1,5 +1,9 @@
-package notepad;
+package homework160526.notepad;
 
+/**
+ * This class is used to create records.
+ *
+ */
 public class Record {
 
 	private String text;
