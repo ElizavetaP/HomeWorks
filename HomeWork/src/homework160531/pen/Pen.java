@@ -4,42 +4,37 @@ public class Pen {
 	
 	private String color;
 	private String design; //ball, feather, capillary.
-	private boolean isWriting = true;
-	private int numberOfrecords = 0;
-	private String records = "";
+	private double price;
 	
-	public Pen(String color, String design){
+	public Pen(String color, String design, double price){
 		this.color=color;
 		this.design=design;
+		this.price=price;
 	}
-	
-	public String getColor(){
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getColor(){
 		return color;
 	}
 	
 	public String getDesign(){
 		return design;
 	}
-	
-	public void write(String text){
-		if(isWriting){
-			records += text +"\n";
-			System.out.println(text);
-			numberOfrecords++;
-			if (numberOfrecords >= 5){
-				isWriting = false;
-			}
-		}else{
-			System.out.println("Pen isn't writing");
-		}
+
+	@Override
+	public int hashCode() {
+		int result = color != null ? color.hashCode() : 0;
+		result = 31 * result + (design != null ? design.hashCode() : 0);
+		return result;
 	}
-	
-	public void fill(){
-		isWriting = true;
-		System.out.println("Pen is writing");
-		numberOfrecords = 0;
-	}
-	
+
 	@Override
 	public boolean equals(Object pen){
 		if (pen==null){
@@ -62,7 +57,7 @@ public class Pen {
 	
 	@Override
 	public String toString(){
-		return records;
+		return color + " " + design +" pen";
 		
 	}
 
