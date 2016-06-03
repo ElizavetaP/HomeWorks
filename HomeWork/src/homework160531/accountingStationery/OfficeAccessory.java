@@ -9,10 +9,10 @@ public abstract class OfficeAccessory {
     private String design; //Pen: ball, feather, capillary.
     private double price;
 
-    public OfficeAccessory(String color, String design, double price){
-        this.color=color;
-        this.design=design;
-        this.price=price;
+    public OfficeAccessory(String color, String design, double price) {
+        this.color = color;
+        this.design = design;
+        this.price = price;
     }
 
     public void setPrice(double price) {
@@ -23,11 +23,11 @@ public abstract class OfficeAccessory {
         return price;
     }
 
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 
-    public String getDesign(){
+    public String getDesign() {
         return design;
     }
 
@@ -76,9 +76,8 @@ public abstract class OfficeAccessory {
     }*/
 
 
-
     @Override
-    public String toString(){
+    public String toString() {
         return getColor() + " " + getDesign() + " " + getClass().getSimpleName();
 
     }

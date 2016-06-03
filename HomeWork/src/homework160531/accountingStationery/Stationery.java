@@ -6,15 +6,15 @@ import java.util.List;
 /**
  * Created by test on 6/3/16.
  */
-public class Stationery <T> {
+public class Stationery<T> {
 
     public List<T> accessories = new ArrayList<>();
 
-    void add(T accessory){
+    void add(T accessory) {
         accessories.add(accessory);
     }
 
-    void remove(T accessory){
+    void remove(T accessory) {
         accessories.remove(accessory);
     }
 
