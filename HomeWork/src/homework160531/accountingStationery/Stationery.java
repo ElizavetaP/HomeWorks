@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by test on 6/3/16.
  */
-public class Stationery<T> {
+public class Stationery<T extends OfficeAccessory> {
 
     public List<T> accessories = new ArrayList<>();
 
@@ -21,5 +21,14 @@ public class Stationery<T> {
     @Override
     public String toString() {
         return accessories.toString();
+    }
+
+    public double totalCost() {
+
+        double cost = 0;
+        for (int i = 0; i < accessories.size(); i++) {
+            cost += accessories.get(i).getPrice();
+        }
+        return cost;
     }
 }

@@ -38,5 +38,8 @@ public class worker {
 
         System.out.println(notebook.equals(notebook1));
 
+        System.out.println(stationery.totalCost());
+
+
     }
 }

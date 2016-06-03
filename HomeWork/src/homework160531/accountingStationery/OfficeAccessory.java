@@ -55,27 +55,6 @@ public abstract class OfficeAccessory {
         return result;
     }
 
-    /* @Override
-    public boolean equals(Object accessory){
-        if (accessory==null){
-            return false;
-        }
-        if(accessory==this){
-            return true;
-        }
-        if (accessory.getClass() != getClass()){
-            return false;
-        }
-        getClass().getSimpleName() other = (getClass().getSimpleName()) accessory;
-        if (color != other.getColor())
-            return false;
-        if (design != other.getDesign())
-            return false;
-        return true;
-
-    }*/
-
-
     @Override
     public String toString() {
         return getColor() + " " + getDesign() + " " + getClass().getSimpleName();
