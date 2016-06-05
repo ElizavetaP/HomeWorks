@@ -1,9 +1,11 @@
 package homework160531.accountingStationery;
 
+import java.util.ArrayList;
+
 /**
- * Created by test on 6/3/16.
+ * Usage example.
  */
-public class worker {
+public class Worker {
     public static void main(String[] args) {
         Stationery stationery = new Stationery();
 
@@ -40,6 +42,7 @@ public class worker {
 
         System.out.println(stationery.totalCost());
 
+        
 
     }
 }

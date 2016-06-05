@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by test on 6/3/16.
+ * This class collects office accessories into an array.
  */
 public class Stationery<T extends OfficeAccessory> {
 
@@ -23,6 +23,10 @@ public class Stationery<T extends OfficeAccessory> {
         return accessories.toString();
     }
 
+    /**
+     * calculation of the total cost stationery.
+     * @return cost
+     */
     public double totalCost() {
 
         double cost = 0;

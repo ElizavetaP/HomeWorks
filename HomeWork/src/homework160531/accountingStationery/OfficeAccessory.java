@@ -1,7 +1,7 @@
 package homework160531.accountingStationery;
 
 /**
- * Created by test on 6/3/16.
+ * This is the base class for creating office accessories.
  */
 public abstract class OfficeAccessory {
 

@@ -1,7 +1,7 @@
 package homework160531.accountingStationery;
 
 /**
- * Created by test on 6/3/16.
+ * This class is used to create notepads.
  */
 public class Notepad extends OfficeAccessory {
 
