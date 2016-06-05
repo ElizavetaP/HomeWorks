@@ -13,19 +13,19 @@ public class BeginnerKit {
     private int numberBlackWorkbooklPen = 5;
     private int numberBlackNotebookPen = 2;
 
-    BeginnerKit(){
+    BeginnerKit() {
 
     }
 
-    BeginnerKit(int numberBlackBallPen,int numberBlueFeatherPen, int numberBlackWorkbooklPen,
-                int numberBlackNotebookPen){
+    BeginnerKit(int numberBlackBallPen, int numberBlueFeatherPen, int numberBlackWorkbooklPen,
+                int numberBlackNotebookPen) {
         this.numberBlackBallPen = numberBlackBallPen;
         this.numberBlueFeatherPen = numberBlueFeatherPen;
         this.numberBlackWorkbooklPen = numberBlackWorkbooklPen;
         this.numberBlackNotebookPen = numberBlackNotebookPen;
     }
 
-    public Stationery createKit(){
+    public Stationery createKit() {
 
         Stationery kit = new Stationery();
 
