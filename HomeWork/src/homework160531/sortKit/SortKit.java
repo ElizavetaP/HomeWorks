@@ -1,4 +1,4 @@
-package homework160531.homework160531.sortKit;
+package homework160531.sortKit;
 
 import java.util.Collections;
 import java.util.Comparator;

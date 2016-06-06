@@ -1,4 +1,4 @@
-package homework160531.homework160531.sortKit;
+package homework160531.sortKit;
 
 /**
  * This is the base class for creating office accessories.

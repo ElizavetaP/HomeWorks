@@ -1,4 +1,4 @@
-package homework160531.homework160531.sortKit;
+package homework160531.sortKit;
 
 /**
  * This is the class for creating beginner kit.
