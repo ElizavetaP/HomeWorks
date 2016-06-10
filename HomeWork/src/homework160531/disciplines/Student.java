@@ -6,13 +6,13 @@ import java.util.List;
 /**
  * This is the base class for creating students.
  */
-public class Student <T> {
+public class Student<T> {
 
-    private  String name;
+    private String name;
     private List<T> assessments = new ArrayList<>();
 
 
-    public Student (String name){
+    public Student(String name) {
         this.name = name;
 
     }

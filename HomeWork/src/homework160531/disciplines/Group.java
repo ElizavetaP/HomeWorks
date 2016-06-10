@@ -6,37 +6,65 @@ import java.util.List;
 /**
  * Created by test on 6/7/16.
  */
-public class Group <T>{
+public class Group<T extends Number> {
     private Discipline discipline;
-    private List <Student<T>> journal = new ArrayList<>();
+    private List<Student<T>> journal = new ArrayList<>();
 
-    public Group(Discipline discipline){
-        this.discipline=discipline;
+    public Group(Discipline discipline) {
+        this.discipline = discipline;
     }
 
     public List<Student<T>> getJournal() {
         return journal;
     }
 
-    public void addStudent(Student student){
+    public Discipline getDiscipline() {
+        return discipline;
+    }
+
+    public void addStudent(Student student) {
         journal.add(student);
     }
 
-    public void removeStudent(Student student){
+    public void removeStudent(Student student) {
         journal.remove(student);
     }
 
-    public String printJournal(){
+    public String printJournal() {
         return discipline + " " + journal.toString();
     }
 
-    public String isStudent(Student student){
-        for (Student<T> stud:journal) {
-            if(stud==student){
-                return  student.getName() + " is a student of " + discipline;
+    private Student<T> getStudent(String name) {
+        for (Student<T> student : journal) {
+            if (student.getName().equals(name)) {
+                return student;
             }
+        }
+        return null;
+    }
+
+    public boolean containStudent(String name) {
+        return getStudent(name) != null;
+    }
+
+    public List<T> getGrades(String name) {
+        if (containStudent(name)) {
+            return getStudent(name).getAssessments();
 
         }
-        return student.getName() + " isn't a student of " + discipline;
+        return null;
     }
- }
+
+    public double average(String name) {
+        if (containStudent(name)) {
+            List<T> grades = getGrades(name);
+            double sum = 0;
+            for (T grade : grades) {
+                sum += grade.doubleValue();
+            }
+            return sum / grades.size();
+        }
+
+        return -1;
+    }
+}
