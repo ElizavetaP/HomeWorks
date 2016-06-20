@@ -1,7 +1,7 @@
 package homework3module.logger;
 
 /**
- * Created by Elizaveta on 6/16/16.
+ * Usage example.
  */
 public class Main {
     public static void main(String[] args) {

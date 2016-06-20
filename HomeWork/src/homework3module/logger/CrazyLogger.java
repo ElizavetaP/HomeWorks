@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Formatter;
 
 /**
- * Created by Elizaveta on 6/16/16.
+ *This class is used to create the log.
  */
 public class CrazyLogger {
 
@@ -18,14 +18,14 @@ public class CrazyLogger {
 
     public void append(Object obj) {
         Formatter formatter = new Formatter();
-        formatter.format("%td-", calendar);
-        formatter.format("%tm-", calendar);
-        formatter.format("%tY : ", calendar);
-        formatter.format("%tH-", calendar);
-        formatter.format("%tM - ", calendar);
+        formatter.format("%1$td-%1$tm-%1$tY : %1$tH-%1$tM - ", calendar);
         logs.append(formatter + "" + obj + ";\n");
     }
 
+    /**
+     *search in log.
+     * @param str
+     */
     public StringBuilder find(String str) {
         String[] logset = logs.toString().split(";");
         StringBuilder result = new StringBuilder();
