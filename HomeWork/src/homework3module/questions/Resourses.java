@@ -18,26 +18,27 @@ public class Resourses {
 
     }
 
-    public String getValue(String key) {
+    private String getValue(String key) {
 
         if (bundle.containsKey(key)) {
             return bundle.getString(key);
-        } else{
-            return "Еhere is no such key";
+        } else {
+            return "There is no such key";
         }
 
     }
 
-    public String getQuestions(){
-        String result = "";
-        int countOfQuestions = bundle.keySet().size()/2 + 1;
-        for (int i = 1; i < countOfQuestions; i++) {
-            result += getValue("question."+i) + "\n";
+    public String[] getQuestions() {
+        int countOfQuestions = bundle.keySet().size() / 2;
+        String[] result = new String[countOfQuestions];
+
+        for (int i = 1; i <= countOfQuestions; i++) {
+            result[i - 1] = getValue("question." + i);
         }
         return result;
     }
 
-    public String getAnswer(int numberOfQuestions){
-       return getValue("answer." + numberOfQuestions);
+    public String getAnswer(int numberOfQuestions) {
+        return getValue("answer." + numberOfQuestions);
     }
 }
