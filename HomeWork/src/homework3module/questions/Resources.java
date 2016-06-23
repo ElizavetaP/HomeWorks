@@ -7,10 +7,10 @@ import java.util.Set;
 /**
  * This class provides methods to work with ResourceBundle.
  */
-public class Resourses {
+public class Resources {
     private ResourceBundle bundle;
 
-    public Resourses(Locale locale) {
+    public Resources(Locale locale) {
 
         bundle = ResourceBundle
 
