@@ -31,5 +31,4 @@ public class Parsing {
     private static String getText() throws IOException {
         return new String(Files.readAllBytes(Paths.get("resources/article.html")), "windows-1251").replaceAll("<.*?>", "");
     }
-
 }
