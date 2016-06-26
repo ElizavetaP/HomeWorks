@@ -27,10 +27,12 @@ public class Main {
             for (String word : keywords) {
                 int count = 0;
                 int fromIndex = 0;
-                while (string.indexOf(word, fromIndex) > -1) {
+                int readedByte = string.indexOf(word, fromIndex);
+                while (readedByte > -1) {
 
                     count++;
-                    fromIndex = string.indexOf(word, fromIndex) + word.length();
+                    readedByte = string.indexOf(word, fromIndex);
+                    fromIndex = readedByte + word.length();
 
                 }
                 line.append("The word " + "'" + word + "'" + " occurs in the file " + count + " times" + "\n");
