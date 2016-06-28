@@ -2,12 +2,10 @@ package homework4module.films;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class Film implements Serializable{
-    private List<Actor> actors = new ArrayList<>();
+    private Set<Actor> actors = new HashSet<Actor>();
     private String name;
 
     public Film(String name){
@@ -26,8 +24,23 @@ public class Film implements Serializable{
         actors.add(actor);
     }
 
-    public List<Actor> getActors (){
+    public Set<Actor> getActors (){
         return actors;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Film film = (Film) o;
+
+        return name != null ? name.equals(film.name) : film.name == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return name != null ? name.hashCode() : 0;
+    }
 }
