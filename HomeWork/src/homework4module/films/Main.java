@@ -29,24 +29,24 @@ public class Main {
             }
         }
 
-        Set<Film> filmessout = null;
+        Set<Film> filmsout = null;
         try {
             FileInputStream is = new FileInputStream("serializ.txt");
             ObjectInputStream ois = new ObjectInputStream(is);
 
             while (is.available() > 0) {
-                filmessout = (HashSet<Film>) ois.readObject();
+                filmsout = (HashSet<Film>) ois.readObject();
             }
-            info(filmessout);
-            }catch(ClassNotFoundException e){
-                e.printStackTrace();
-            }catch(IOException e){
-                e.printStackTrace();
-            }
+            info(filmsout);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        Map<String,Film> map = new HashMap<>();
-        for (Film film : filmessout) {
-            map.put(film.getName(),film);
+        Map<String, Film> map = new HashMap<>();
+        for (Film film : filmsout) {
+            map.put(film.getName(), film);
         }
 
         Actor mcGregor = new Actor("Ewan", "McGregor", LocalDate.of(1971, 3, 31));
@@ -55,13 +55,14 @@ public class Main {
 
         try {
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("serializ.txt"));
-            oos.writeObject(filmessout);
+            oos.writeObject(filmsout);
             oos.close();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        }
-    private static void info(Set<Film> films){
+    }
+
+    private static void info(Set<Film> films) {
         for (Film film : films) {
             System.out.println("Film " + "'" + film.getName() + "'");
             System.out.println("Actors: ");
@@ -71,4 +72,4 @@ public class Main {
             System.out.println();
         }
     }
-    }
+}
