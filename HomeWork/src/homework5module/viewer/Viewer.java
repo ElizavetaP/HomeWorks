@@ -1,24 +1,27 @@
 package homework5module.viewer;
 
-import java.io.File;
+import java.io.*;
+
+import static homework5module.viewer.Directories.searchfiles;
+import static homework5module.viewer.Directories.writeToEndFile;
+import static homework5module.viewer.Directories.writeToFile;
 
 public class Viewer {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         try {
-            searchfiles(new File("/home/test/Untitle"));
-        }catch (NoDirectoryExeption e){
+            searchfiles(new File("/home/test/Untitled"));
+        } catch (NoDirectoryExeption e) {
             System.err.println("Enter existing directory");
         }
+        FileInputStream in = new FileInputStream("Hello.java");
 
+        int bytesAvailable = in.available();
+        byte[] bytes = new byte[bytesAvailable];
+        in.read(bytes);
+        byte[] bytesToWrite = {1, 2, 3};
+        writeToFile("/home/test/Untitled/write", bytesToWrite);
+        writeToEndFile("/home/test/Untitled/write",bytes);
     }
-    static void searchfiles(File topDirectory) throws NoDirectoryExeption {
 
-        File[] list = topDirectory.listFiles();
-        if(list==null) throw new NoDirectoryExeption("no such directory");
 
-        System.out.println(list.length);
-        for(File file:list){
-            System.out.println(file);
-        }
-    }
 }
