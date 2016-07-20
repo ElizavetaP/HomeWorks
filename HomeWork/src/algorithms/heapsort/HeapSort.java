@@ -2,44 +2,41 @@ package algorithms.heapsort;
 
 public class HeapSort {
     public static void main(String[] args) {
-        int[] array = {1, 4, 7, 3, 5, 9, 44, 2, 90};
+        int[] array = {1, 4, 7, 3, 6,99,88,400,6,5};
         heapsort(array);
+        for (int j : array) {
+            System.out.println(j);
+        }
     }
 
     private static void heapsort(int[] array) {
         int len = array.length;
-        for (int i = 0; i < Math.log(array.length) / Math.log(2) - 1; i++) {
-            tree(array, 0);
-            for (int j : array) {
-                System.out.println(j);
-            }
-            System.out.println();
-        }
-        for (int i = 1; i < len - 2; i++) {
+        for (int i = 0; i < len - 2; i++) {
             tree(array, i);
-            for (int j : array) {
-                System.out.println(j);
-            }
-            System.out.println();
+        }
+        if(array[len-1]>array[len-2]){
+            int temp = array[len-1];
+            array[len-1] = array[len-2];
+            array[len-2] = temp;
         }
     }
     private static void tree(int[] array, int start) {
         int len = array.length;
-        for (int i = start; i < (len + start) / 2 + 1; i++) {
 
-            if ((2 * i + 2 < len) && array[2 * i + 2] > array[i]) {
-                if(array[2 * i + 2]>array[2 * i + 1] && array[2 * i + 2] > array[i]) {
-                    int temp = array[2 * i + 2];
-                    array[2 * i + 2] = array[i];
+        for (int i = (len + start) / 2 ; i >= start; i--) {
+            if (2 * (i-start) + 2 + start < len)  {
+                if(array[2 * (i-start) + 2 + start]>array[2 * (i-start) + 1 +start] && array[2 * (i-start) + 2 + start] > array[i]) {
+                    int temp = array[2 * (i-start) + 2 + start];
+                    array[2 * (i-start)+ 2 + start] = array[i];
                     array[i] = temp;
-                }else if (array[2 * i + 1]>array[2 * i + 2] && array[2 * i + 1] > array[i]){
-                    int temp = array[2 * i + 1];
-                    array[2 * i + 1] = array[i];
+                }else if (array[2 * (i-start) + 1 + start]>array[2 * (i-start) + 2 + start] && array[2 * (i-start) + 1 +start] > array[i]){
+                    int temp = array[2 * (i-start) + 1 + start];
+                    array[2 * (i-start) + 1 + start] = array[i];
                     array[i] = temp;
                 }
-            } else if ((2 * i + 1 < len) && array[2 * i + 1] > array[i]) {
-                int temp = array[2 * i + 1];
-                array[2 * i + 1] = array[i];
+            } else if ((2 * (i-start) + 1 +start < len) && array[2 * (i-start) + 1 +start] > array[i]) {
+                int temp = array[2 * (i-start) + 1 + start];
+                array[2 * (i-start) + 1 + start] = array[i];
                 array[i] = temp;
             }
         }
